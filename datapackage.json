@@ -1,0 +1,113 @@
+{
+  "bytes": 6062409,
+  "count_of_rows": 55778,
+  "hash": "ca5c982d97f3b1a6bd724e0dbdefd08a",
+  "homepage": "http://www.ourairports.com/",
+  "licenses": [
+    {
+      "id": "odc-pddl",
+      "name": "open_data_commons_public_domain_dedication_and_license_v1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
+    }
+  ],
+  "name": "airport-codes",
+  "profile": "data-package",
+  "readme": null,
+  "resources": [
+    {
+      "bytes": 6062409,
+      "dialect": {
+        "caseSensitiveHeader": false,
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "89c336525e4a7be6e120eb3b6a1e6eaa",
+      "name": "airport-codes",
+      "path": "data/airport-codes.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "format": "default",
+            "name": "ident",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "type",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "elevation_ft",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "continent",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "iso_country",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "iso_region",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "municipality",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "gps_code",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "iata_code",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "local_code",
+            "type": "string"
+          },
+          {
+            "format": "default",
+            "name": "coordinates",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Our Airports",
+      "path": "http://ourairports.com/data/",
+      "title": "Our Airports"
+    }
+  ],
+  "title": "Airport Codes",
+  "version": "0.2.0"
+}
