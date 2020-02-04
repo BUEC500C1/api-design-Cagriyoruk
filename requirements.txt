@@ -1,2 +1,2 @@
-import requests
-import Package
+requests
+Package
