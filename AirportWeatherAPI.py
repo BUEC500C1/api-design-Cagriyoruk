@@ -1,3 +1,5 @@
+# Cagri Yoruk cyoruk@bu.edu
+# Airport Weahter API
 import requests
 from datapackage import Package
 
