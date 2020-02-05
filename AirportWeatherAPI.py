@@ -18,7 +18,7 @@ def get_airpot():
 
 def get_weather():
 
-	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=6135770a70c1b0731cb67fe36fa69941'.format(get_airpot())
+	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airpot())
 
 	res = requests.get(url)
 
