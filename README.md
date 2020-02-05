@@ -26,7 +26,7 @@ Here is an example where you can put your API key.
 url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airpot()) 
 ```
 
-## Example
+# Example
 Enter the Airport name to get the current weather conditions. 
 
 * Run the File
