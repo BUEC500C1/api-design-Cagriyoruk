@@ -34,3 +34,6 @@ Enter the Airport name to get the current weather conditions.
 * That's all you need to do
 
 ![Screenshot_2020-02-04_20-16-28](https://user-images.githubusercontent.com/55101879/73802433-9c81cd00-478b-11ea-9c1a-2d1dd0b92c9c.png)
+
+# Important Information
+The unit for temperature is Kelvin. 
