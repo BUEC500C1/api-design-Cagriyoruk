@@ -17,3 +17,9 @@ import my module to your your code
 ``` 
 import AirportWeatherAPI.py
 ```
+## Register to OpenWeatherMap
+Regsiter to Openweather Map API to get a key. You need to use it to access the weather conditions. 
+
+Here is an example where you can put your API key.
+
+``` url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airpot()) ```
