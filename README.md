@@ -7,6 +7,7 @@ I created 2 functions in order to get the current weather conditions for the air
 
 # Preparation
 clone my repo:
+
 ''' git clone https://github.com/BUEC500C1/api-design-Cagriyoruk '''
  
 import my function / library to your code
