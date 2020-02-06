@@ -4,7 +4,7 @@ import requests
 from datapackage import Package
 
 
-def get_airpot():
+def get_airport():
   package = Package('https://datahub.io/core/airport-codes/datapackage.json')
   # print processed tabular data (if exists any)
   for resource in package.resources:
