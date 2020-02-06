@@ -19,14 +19,10 @@ def get_airport(airport_name):
 def get_weather():
 
     airport_name = input('Please enter the airport name:')
-	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airport(airport_name))
-
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airport(airport_name))
     res = requests.get(url)
-
     data = res.json()
-
     condition = data['weather'][0]['description']
     max_temp = data['main']['temp_max']
     min_temp = data['main']['temp_min']
-
     print("The weather is {} , the max temperature is {} and the minimum temperature is {}".format(condition, max_temp, min_temp))
