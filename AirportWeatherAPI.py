@@ -19,7 +19,7 @@ def get_airport(airport_name):
 def get_weather():
 
     airport_name = input('Please enter the airport name:')
-	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airport())
+	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airport(airport_name))
 
     res = requests.get(url)
 
