@@ -4,13 +4,13 @@ import requests
 from datapackage import Package
 
 
-def get_airpot():
+def get_airpot(airport_name):
+  global city
   package = Package('https://datahub.io/core/airport-codes/datapackage.json')
   # print processed tabular data (if exists any)
   for resource in package.resources:
     if resource.descriptor['datahub']['type'] == 'derived/csv':
       airport_list = resource.read()
-      airport_name = input('Please enter the airport name:')
       for each in airport_list:
         every = each[2]
         if every == airport_name:
@@ -20,14 +20,15 @@ def get_airpot():
 
 def get_weather():
 
-	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airpot())
+    airport_name = input('Please enter the airport name:')
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=6135770a70c1b0731cb67fe36fa69941'.format(get_airpot(airport_name))
 
-	res = requests.get(url)
+    res = requests.get(url)
 
-	data = res.json()
+    data = res.json()
 
-	condition = data['weather'][0]['description']
-	max_temp = data['main']['temp_max']
-	min_temp = data['main']['temp_min']
+    condition = data['weather'][0]['description']
+    max_temp = data['main']['temp_max']
+    min_temp = data['main']['temp_min']
 
-	print("The weather is {} , the max temperature is {} and the minimum temperature is {}".format(condition, max_temp, min_temp))
+    print("The weather is {} , the max temperature is {} and the minimum temperature is {}".format(condition, max_temp, min_temp))
