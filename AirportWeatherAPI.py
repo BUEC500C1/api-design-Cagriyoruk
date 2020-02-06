@@ -3,9 +3,7 @@
 import requests
 from datapackage import Package
 
-
-def get_airpot(airport_name):
-  global city
+def get_airport(airport_name):
   package = Package('https://datahub.io/core/airport-codes/datapackage.json')
   # print processed tabular data (if exists any)
   for resource in package.resources:
@@ -21,7 +19,7 @@ def get_airpot(airport_name):
 def get_weather():
 
     airport_name = input('Please enter the airport name:')
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=6135770a70c1b0731cb67fe36fa69941'.format(get_airpot(airport_name))
+	url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airport())
 
     res = requests.get(url)
 
