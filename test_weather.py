@@ -1,8 +1,7 @@
 from AirportWeatherAPI import *
-import pytest
 
-def test_airport():
+def test_weather():
   city = ['Boston', 'New York']
 
   for each in city:
-    AirportWeatherAPI.get_weather(each)
+    get_weather(each)
