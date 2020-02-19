@@ -1,4 +1,4 @@
-from AiportWeahterAPI import *
+from AirportWeahterAPI import *
 import pytest
 
 def test_airport():
