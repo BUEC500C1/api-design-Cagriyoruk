@@ -3,7 +3,8 @@
 import requests
 from datapackage import Package
 
-def get_airport(airport_name):
+def get_airport(a_names):
+  airport_name = a_names
   package = Package('https://datahub.io/core/airport-codes/datapackage.json')
   # print processed tabular data (if exists any)
   for resource in package.resources:
@@ -14,12 +15,11 @@ def get_airport(airport_name):
         if every == airport_name:
           city = each[7]
           break
-  return city
+  get_weather(city)
 
-def get_weather():
+def get_weather(city):
 
-    airport_name = input('Please enter the airport name:')
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(get_airport(airport_name))
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=("YOUR API KEY GOES HERE")'.format(city)
     res = requests.get(url)
     data = res.json()
     condition = data['weather'][0]['description']
