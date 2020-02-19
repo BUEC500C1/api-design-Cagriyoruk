@@ -2,4 +2,5 @@ import pytest
 from AirportWeatherAPI import *
 
 def test_weather():
-  assert get_weather('Boston') != ""
+	get_weather('Boston')
+	get_airport('Wbz Heliport')
