@@ -15,7 +15,9 @@ def get_airport(a_names):
         if every == airport_name:
           city = each[7]
           break
-  get_weather(city)
+        else:
+          return "Wrong Input"
+  return get_weather(city)
 
 def get_weather(city):
 
