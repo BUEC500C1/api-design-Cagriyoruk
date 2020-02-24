@@ -4,6 +4,8 @@ import requests
 from datapackage import Package
 
 def get_airport(a_names):
+  if not isinstance(a_names,str):
+    return "Wrong Type"
   airport_name = a_names
   package = Package('https://datahub.io/core/airport-codes/datapackage.json')
   # print processed tabular data (if exists any)
@@ -15,11 +17,14 @@ def get_airport(a_names):
         if every == airport_name:
           city = each[7]
           break
-  get_weather(city)
+        else:
+          return "Wrong Input"
+  return get_weather(city)
 
 def get_weather(city):
-
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=6135770a70c1b0731cb67fe36fa69941'.format(city)
+    if not isinstance(city,str):
+      return "Wrong Input"    
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid="API KEY GOES HERE"'.format(city)
     res = requests.get(url)
     data = res.json()
     condition = data['weather'][0]['description']
