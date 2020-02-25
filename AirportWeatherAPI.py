@@ -23,8 +23,9 @@ def get_airport(a_names):
 
 def get_weather(city):
     if not isinstance(city,str):
-      return "Wrong Input"    
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid="6135770a70c1b0731cb67fe36fa69941"'.format(city)
+      return "Wrong Input"
+    api_key = ****
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=6135770a70c1b0731cb67fe36fa69941'.format(city)
     res = requests.get(url)
     data = res.json()
     condition = data['weather'][0]['description']
